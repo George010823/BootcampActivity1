@@ -8,14 +8,13 @@ class Gerente: Empleado(), AccionEmpleado {
     override var cantHoraAdicional = 0
     override val salarioBase = valorHora * cantHoraMes
     override var bonus = valorHora * cantHoraAdicional
-
-    override fun calcularSalario() {
-        println("Salario total del gerente es: ${salarioBase + bonus}")
+    override fun SeleccionarRolEmpleado(rol: String) {
+        println("Yo soy un $rol.")
     }
-    override fun calcularBono() {
-        println("Salario total del gerente es: ${salarioBase + bonus}")
+    override fun calcularBono(rol: String) {
+        println("Bono total del $rol es: $bonus")
     }
-    override fun SeleccionarRolEmpleado() {
-        println("Salario total del gerente es: ${salarioBase + bonus}")
+    override fun calcularSalario(rol: String) {
+        println("Salario total del $rol es: ${salarioBase + bonus}")
     }
 }

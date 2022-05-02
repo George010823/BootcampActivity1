@@ -1,7 +1,7 @@
 package bootcamp.activity1
 
 interface AccionEmpleado {
-    fun calcularSalario()
-    fun calcularBono()
-    fun SeleccionarRolEmpleado()
+    fun calcularSalario(rol: String)
+    fun calcularBono(rol: String)
+    fun SeleccionarRolEmpleado(rol: String)
 }

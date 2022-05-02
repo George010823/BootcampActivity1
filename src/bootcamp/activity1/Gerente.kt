@@ -12,4 +12,10 @@ class Gerente: Empleado(), AccionEmpleado {
     override fun calcularSalario() {
         println("Salario total del gerente es: ${salarioBase + bonus}")
     }
+    override fun calcularBono() {
+        println("Salario total del gerente es: ${salarioBase + bonus}")
+    }
+    override fun SeleccionarRolEmpleado() {
+        println("Salario total del gerente es: ${salarioBase + bonus}")
+    }
 }

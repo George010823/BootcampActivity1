@@ -7,14 +7,24 @@ fun main(args: Array<String>){
     println("3 para Operador: ")
     var rol = readLine()?.toString() as String
 
-    if (rol == "1" || rol == "2" || rol == "3") {
-        seleccionarRolEmpleado(rol)
-        calcularBonuEmpleado(rol)
-        calcularSalarioEmpleado(rol)
-    }else println("No ha seleccionado un numero valido")
-
-
+    recursiva(rol)
 }
+fun recursiva(rol: String) {
+    while (true) {
+        if (rol == "1" || rol == "2" || rol == "3") {
+            seleccionarRolEmpleado(rol)
+            calcularBonuEmpleado(rol)
+            calcularSalarioEmpleado(rol)
+            var rol = readLine()?.toString() as String
+            recursiva(rol)
+        } else if (rol != "1" && rol != "2" && rol != "3") {
+            println("No ha seleccionado un numero valido")
+            var rol = readLine()?.toString() as String
+            recursiva(rol)
+        }
+    }
+}
+
 fun seleccionarRolEmpleado(rol: String?) {
     val gerente = Gerente()
     val contador = Contador()

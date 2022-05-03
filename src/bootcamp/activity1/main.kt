@@ -1,31 +1,33 @@
 package bootcamp.activity1
 
-fun main(args: Array<String>){
+fun main(){
     println("Por favor selecciona tu rol: ")
     println("1 para Gerente: ")
     println("2 para Contador: ")
     println("3 para Operador: ")
-    var rol = readLine()?.toString() as String
+    println("4 para salir: ")
+    val rol = readLine() as String
 
-    recursiva(rol)
+    recursive(rol)
 }
-fun recursiva(rol: String) {
+fun recursive(rol: String) {
     while (true) {
         if (rol == "1" || rol == "2" || rol == "3") {
-            seleccionarRolEmpleado(rol)
-            calcularBonuEmpleado(rol)
-            calcularSalarioEmpleado(rol)
+            reselectionRolEmployable(rol)
+            calculatorBonusEmployable(rol)
+            calculatorIlarioEmployable(rol)
             var rol = readLine()?.toString() as String
-            recursiva(rol)
-        } else if (rol != "1" && rol != "2" && rol != "3") {
-            println("No ha seleccionado un numero valido")
+            recursive(rol)
+        } else if (rol != "1" && rol != "2" && rol != "3" && rol != "4") {
+            println("Seleccione un numero entre 1 y 3 para calcular tu salario o 4 para salir por favor")
             var rol = readLine()?.toString() as String
-            recursiva(rol)
-        }
+            recursive(rol)
+        } else (rol == "4")
+            break
     }
 }
 
-fun seleccionarRolEmpleado(rol: String?) {
+fun reselectionRolEmployable(rol: String?) {
     val gerente = Gerente()
     val contador = Contador()
     val operador = Operador()
@@ -36,7 +38,7 @@ fun seleccionarRolEmpleado(rol: String?) {
         else -> " ${operador.SeleccionarRolEmpleado("Operador")} "
     }
 }
-fun calcularBonuEmpleado(rol: String?) {
+fun calculatorBonusEmployable(rol: String?) {
     val gerente = Gerente()
     val contador = Contador()
     val operador = Operador()
@@ -46,7 +48,7 @@ fun calcularBonuEmpleado(rol: String?) {
         else -> " ${operador.calcularBono("Operador")} "
     }
 }
-fun calcularSalarioEmpleado(rol: String?){
+fun calculatorIlarioEmployable(rol: String?){
     val gerente = Gerente()
     val contador = Contador()
     val operador = Operador()

@@ -16,6 +16,6 @@ class Contador: Empleado(), AccionEmpleado {
         println("Bono total del Contador es: $bonus")
     }
     override fun calcularSalario(rol: String) {
-        println("Salario total del Contador es: ${salarioBase + bonus}")
+        println("Salario total del Contador es: ${String.format("%,d",salarioBase + bonus)}")
     }
 }

@@ -1,5 +1,7 @@
 package bootcamp.activity1
 
+import java.text.DecimalFormat
+
 class Gerente: Empleado(), AccionEmpleado {
     //Gerente se gana 200 por hora y trabaja 200 horas al mes
 
@@ -15,6 +17,6 @@ class Gerente: Empleado(), AccionEmpleado {
         println("Bono total del $rol es: $bonus")
     }
     override fun calcularSalario(rol: String) {
-        println("Salario total del $rol es: ${salarioBase + bonus}")
+        println("Salario total del $rol es: ${String.format("%,d",salarioBase + bonus)}")
     }
 }

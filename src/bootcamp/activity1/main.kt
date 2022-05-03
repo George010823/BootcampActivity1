@@ -5,11 +5,15 @@ fun main(args: Array<String>){
     println("1 para Gerente: ")
     println("2 para Contador: ")
     println("3 para Operador: ")
-    var rol = readLine()
+    var rol = readLine()?.toString() as String
 
-    seleccionarRolEmpleado(rol)
-    calcularBonuEmpleado(rol)
-    calcularSalarioEmpleado(rol)
+    if (rol == "1" || rol == "2" || rol == "3") {
+        seleccionarRolEmpleado(rol)
+        calcularBonuEmpleado(rol)
+        calcularSalarioEmpleado(rol)
+    }else println("No ha seleccionado un numero valido")
+
+
 }
 fun seleccionarRolEmpleado(rol: String?) {
     val gerente = Gerente()

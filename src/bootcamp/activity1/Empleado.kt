@@ -7,3 +7,8 @@ abstract class Empleado {
     abstract val salarioBase: Int
     abstract val bonus: Int
 }
+// OTRA POSIBLE FORMA DE CREAR LA CLASE ABSTRACTA
+/*abstract class Empleado2 (val valorHora: Int, val cantHoraMes: Int,
+                          val cantHoraAdicional: Int, val salarioBase: Int,
+                          val bonus: Int)
+}*/

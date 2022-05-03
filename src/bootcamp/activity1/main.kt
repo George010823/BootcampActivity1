@@ -23,8 +23,7 @@ fun seleccionarRolEmpleado(rol: String?) {
     rolEmpleado = when(rol){
         "1" -> " ${gerente.SeleccionarRolEmpleado("Gerente")} "
         "2" -> " ${contador.SeleccionarRolEmpleado("Contador")} "
-        "3" -> " ${operador.SeleccionarRolEmpleado("Operador")} "
-        else -> println("Por favor ingrese un numero entre 1 y 3").toString()
+        else -> " ${operador.SeleccionarRolEmpleado("Operador")} "
     }
 }
 fun calcularBonuEmpleado(rol: String?) {
